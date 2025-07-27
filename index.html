@@ -606,7 +606,7 @@
         function createPuppyCard(puppy, index) {
             return `
                 <div class="puppy-card" style="animation-delay: ${index * 0.1}s;">
-                    <img src="${puppy.image}" alt="${puppy.title}" class="puppy-image">
+                    <img src="${puppy.image}" alt="${puppy.title}" class="puppy-image" onclick="window.open('${puppy.image}', '_blank')" style="cursor: pointer;">
                     <div class="puppy-content">
                         <h3 class="puppy-title">${puppy.title} <span class="paw-icon">🐾</span></h3>
                         <p class="puppy-subtitle">${puppy.subtitle}</p>
