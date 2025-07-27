@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>About Got Puppy? 🐾 - Our Pawsome Story</title>
+    <meta name="description" content="Learn about Got Puppy? - founded by professional treat testers and certified belly rub enthusiasts. Our mission: maximum cuteness, minimum seriousness!">
+    <meta name="keywords" content="about got puppy, puppy website story, dog lovers, funny pet website, puppy adoption mission">
+    <meta name="author" content="Got Puppy?">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="About Got Puppy? 🐾 - Our Pawsome Story">
+    <meta property="og:description" content="Meet the team behind Got Puppy? - professional treat testers and certified belly rub enthusiasts on a mission to spread maximum cuteness!">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://gotpuppy.com/about">
+    <meta property="og:image" content="https://gotpuppy.com/images/about-us-og.jpg">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="About Got Puppy? 🐾">
+    <meta name="twitter:description" content="The story behind the cutest corner of the internet!">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 60px 20px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            margin-bottom: 40px;
+        }
+
+        .hero h1 {
+            font-size: 8rem;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            margin-bottom: 20px;
+            animation: bounce 2s ease-in-out infinite alternate;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            color: rgba(255, 255, 255, 0.9);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .content-section {
+            background: rgba(255, 255, 255, 0.95);
+            margin: 30px auto;
+            max-width: 800px;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            animation: fadeInUp 0.6s ease-out;
+        }
+
+        .content-section h2 {
+            font-size: 2.5rem;
+            color: #333;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .content-section h3 {
+            font-size: 1.8rem;
+            color: #667eea;
+            margin: 30px 0 15px;
+        }
+
+        .content-section p {
+            font-size: 1.2rem;
+            line-height: 1.7;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin: 30px 0;
+        }
+
+        .team-member {
+            background: linear-gradient(135deg, #ff6b6b, #ff8e53);
+            color: white;
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .team-member:hover {
+            transform: translateY(-10px) scale(1.05);
+        }
+
+        .team-member h4 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .team-member .title {
+            font-style: italic;
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+
+        .mission-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .stat-box {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+            border-left: 5px solid #667eea;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #667eea;
+        }
+
+        .stat-label {
+            font-size: 1rem;
+            color: #666;
+            margin-top: 5px;
+        }
+
+        .footer {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            color: white;
+            padding: 50px 20px 20px;
+            margin-top: 60px;
+            text-align: center;
+        }
+
+        .footer h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #f39c12;
+        }
+
+        .footer p {
+            font-size: 1.1rem;
+            color: #bdc3c7;
+            margin-bottom: 20px;
+        }
+
+        .back-link {
+            display: inline-block;
+            background: linear-gradient(45deg, #ff6b6b, #ff8e53);
+            color: white;
+            padding: 15px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: transform 0.3s ease;
+            margin: 20px 0;
+        }
+
+        .back-link:hover {
+            transform: scale(1.1);
+            text-decoration: none;
+            color: white;
+        }
+
+        .paw-icon {
+            display: inline-block;
+            margin: 0 5px;
+            animation: wiggle 2s ease-in-out infinite;
+        }
+
+        .floating-hearts {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .heart {
+            position: absolute;
+            color: rgba(255, 182, 193, 0.3);
+            font-size: 20px;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes bounce {
+            0% { transform: translateY(0px); }
+            100% { transform: translateY(-20px); }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes wiggle {
+            0%, 100% { transform: rotate(0deg); }
+            25% { transform: rotate(-5deg); }
+            75% { transform: rotate(5deg); }
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(100vh) rotate(0deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100px) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                padding: 40px 15px;
+            }
+            
+            .hero h1 {
+                font-size: 3.5rem;
+                line-height: 1.1;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
+                padding: 0 10px;
+            }
+            
+            .content-section {
+                margin: 20px 15px;
+                padding: 30px 20px;
+            }
+            
+            .content-section h2 {
+                font-size: 2rem;
+            }
+            
+            .content-section h3 {
+                font-size: 1.5rem;
+            }
+            
+            .content-section p {
+                font-size: 1.1rem;
+            }
+            
+            .team-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .mission-stats {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+            
+            .footer {
+                padding: 40px 15px 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+            
+            .content-section {
+                padding: 25px 15px;
+            }
+            
+            .content-section h2 {
+                font-size: 1.8rem;
+            }
+            
+            .stat-number {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="floating-hearts" id="hearts"></div>
+    
+    <div class="hero">
+        <h1>🐕 About Got Puppy? 🐕</h1>
+        <p>The paw-some story behind the internet's cutest corner!</p>
+    </div>
+
+    <div class="content-section">
+        <h2>Our Tail... er, Tale! <span class="paw-icon">🐾</span></h2>
+        
+        <p>Welcome to Got Puppy? - where every day is <em>paws-itively</em> amazing and we take our cuteness very seriously (but ourselves, not so much)!</p>
+        
+        <p>It all started when our founder, Chief Biscuit Officer Sarah McSnuggles, realized the internet had a severe shortage of adorable puppy content. "This is <em>ruff</em>!" she declared, "We need more puppies with ridiculously cute names!"</p>
+
+        <h3>Our Mission 🎯</h3>
+        <p>To provide the world with maximum puppy cuteness while maintaining minimum seriousness. We believe that life is too short for boring dog names and not enough belly rubs.</p>
+
+        <div class="mission-stats">
+            <div class="stat-box">
+                <div class="stat-number">∞</div>
+                <div class="stat-label">Tail Wags Generated</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-number">9,999+</div>
+                <div class="stat-label">Hearts Melted Daily</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-number">42</div>
+                <div class="stat-label">Treats Consumed (Per Hour)</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-number">100%</div>
+                <div class="stat-label">Good Dogs</div>
+            </div>
+        </div>
+
+        <h3>Meet Our "Paw-fessional" Team 👥</h3>
+        
+        <div class="team-grid">
+            <div class="team-member">
+                <h4>Sir Woofington III</h4>
+                <div class="title">Chief Happiness Officer</div>
+                <p>Expert in tail-wagging and professional treat taste-tester. Has never met a belly rub he didn't approve of.</p>
+            </div>
+            
+            <div class="team-member">
+                <h4>Dr. Snuggles McFlufferson</h4>
+                <div class="title">Director of Cuddle Operations</div>
+                <p>PhD in Advanced Snuggling from Pawford University. Specializes in lap-warming and sock liberation.</p>
+            </div>
+            
+            <div class="team-member">
+                <h4>Captain Biscuit</h4>
+                <div class="title">Head of Treat Security</div>
+                <p>Former Navy SEAL (Sea, Eat, Adorable, Loveable). Now guards the treat jar with military precision.</p>
+            </div>
+            
+            <div class="team-member">
+                <h4>Princess Zoomies</h4>
+                <div class="title">VP of Energy Management</div>
+                <p>Renewable energy expert specializing in converting excitement into pure speed. Undefeated squirrel chaser.</p>
+            </div>
+        </div>
+
+        <h3>What Makes Us Special? ✨</h3>
+        <p>Unlike other puppy websites that take themselves seriously, we believe in the power of ridiculous names, silly subtitles, and the scientific fact that every puppy is at least 847% more adorable when given a noble title.</p>
+        
+        <p>Our advanced Cuteness Algorithm™ ensures that every visit delivers maximum "aww" factor, while our Randomization Technology guarantees you'll never see the same adorable lineup twice!</p>
+
+        <h3>Our Core Values 💝</h3>
+        <p><strong>Paws-itivity:</strong> We spread joy one tail wag at a time.<br>
+        <strong>Authenticity:</strong> Every puppy name is 100% genuine silliness.<br>
+        <strong>Community:</strong> We believe every dog deserves a loving home.<br>
+        <strong>Fun:</strong> Life's too short for serious dog websites!</p>
+
+        <p>Remember: We're not just a website, we're a <em>paws-itive</em> movement dedicated to making the world a fluffier, happier place!</p>
+    </div>
+
+    <div class="footer">
+        <h3>🐾 Ready for More Cuteness?</h3>
+        <p>Come back tomorrow for brand new puppy friends!</p>
+        <a href="/" class="back-link">🏠 Back to Puppy Paradise</a>
+        <br><br>
+        <p>© 2025 Got Puppy? • Made with 💖 and lots of belly rubs</p>
+        <p><em>"Life is <strong>ruff</strong> without puppies!"</em> 🐾</p>
+    </div>
+
+    <script>
+        // Function to create floating hearts
+        function createFloatingHearts() {
+            const heartsContainer = document.getElementById('hearts');
+            const hearts = ['💖', '💕', '💗', '💝', '🐾', '🦴', '🎾'];
+            
+            for (let i = 0; i < 15; i++) {
+                const heart = document.createElement('div');
+                heart.className = 'heart';
+                heart.textContent = hearts[Math.floor(Math.random() * hearts.length)];
+                heart.style.left = Math.random() * 100 + '%';
+                heart.style.animationDelay = Math.random() * 6 + 's';
+                heart.style.animationDuration = (Math.random() * 3 + 4) + 's';
+                heartsContainer.appendChild(heart);
+            }
+        }
+
+        // Initialize floating hearts when page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            createFloatingHearts();
+        });
+    </script>
+</body>
+</html>

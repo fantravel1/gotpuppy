@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>Got Puppy? 🐾 - Adorable Puppy Gallery & Adoption Resources</title>
+    <meta name="description" content="Welcome to Got Puppy? - the most adorable corner of the internet! Discover cute puppies with hilarious names like Sir Wiggles McFluff and Princess Booplesnoot. Find adoption resources and spread puppy love!">
+    <meta name="keywords" content="puppies, cute dogs, puppy adoption, dog rescue, adorable pets, funny dog names, pet adoption resources, puppy gallery, dog lovers, cute animals">
+    <meta name="author" content="Got Puppy?">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    
+    <!-- Open Graph Meta Tags for Social Sharing -->
+    <meta property="og:title" content="Got Puppy? 🐾 - Adorable Puppy Gallery">
+    <meta property="og:description" content="Get ready for cuteness overload! Meet Sir Wiggles McFluff, Princess Booplesnoot, and more adorable puppies with the funniest names on the internet.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://gotpuppy.com">
+    <meta property="og:image" content="https://gotpuppy.com/images/cute-puppies-og.jpg">
+    <meta property="og:image:alt" content="Adorable puppies from Got Puppy gallery">
+    <meta property="og:site_name" content="Got Puppy?">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Got Puppy? 🐾 - Adorable Puppy Gallery">
+    <meta name="twitter:description" content="Meet the cutest puppies with the funniest names! Sir Wiggles McFluff and friends are waiting for you.">
+    <meta name="twitter:image" content="https://gotpuppy.com/images/cute-puppies-twitter.jpg">
+    <meta name="twitter:image:alt" content="Cute puppies from Got Puppy gallery">
+    
+    <!-- Additional SEO Meta Tags -->
+    <meta name="theme-color" content="#667eea">
+    <meta name="msapplication-TileColor" content="#667eea">
+    <link rel="canonical" href="https://gotpuppy.com">
+    
+    <!-- Structured Data for Rich Snippets -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Got Puppy?",
+        "url": "https://gotpuppy.com",
+        "description": "Adorable puppy gallery featuring cute dogs with hilarious names and adoption resources",
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://gotpuppy.com/search?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Got Puppy?",
+            "description": "The most adorable corner of the internet"
+        }
+    }
+    </script>
+    <title>Got Puppy? 🐾</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 60px 20px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            margin-bottom: 40px;
+        }
+
+        .hero h1 {
+            font-size: 8rem;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            margin-bottom: 20px;
+            animation: bounce 2s ease-in-out infinite alternate;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            color: rgba(255, 255, 255, 0.9);
+            max-width: 600px;
+            margin: 0 auto 30px;
+        }
+
+        .refresh-note {
+            background: linear-gradient(45deg, #ff6b6b, #ff8e53);
+            color: white;
+            padding: 15px 30px;
+            border-radius: 50px;
+            display: inline-block;
+            font-weight: bold;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            animation: pulse 3s ease-in-out infinite;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            padding: 0 20px 60px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .puppy-card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            animation: fadeInUp 0.6s ease-out;
+        }
+
+        .puppy-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 30px 60px rgba(0,0,0,0.2);
+        }
+
+        .puppy-image {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .puppy-card:hover .puppy-image {
+            transform: scale(1.1);
+        }
+
+        .puppy-content {
+            padding: 25px;
+        }
+
+        .puppy-title {
+            font-size: 1.8rem;
+            color: #333;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .puppy-subtitle {
+            font-size: 1.1rem;
+            color: #666;
+            line-height: 1.5;
+            font-style: italic;
+        }
+
+        .paw-icon {
+            display: inline-block;
+            margin: 0 5px;
+            animation: wiggle 2s ease-in-out infinite;
+        }
+
+        @keyframes bounce {
+            0% { transform: translateY(0px); }
+            100% { transform: translateY(-20px); }
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes wiggle {
+            0%, 100% { transform: rotate(0deg); }
+            25% { transform: rotate(-5deg); }
+            75% { transform: rotate(5deg); }
+        }
+
+        .floating-hearts {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .heart {
+            position: absolute;
+            color: rgba(255, 182, 193, 0.3);
+            font-size: 20px;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(100vh) rotate(0deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100px) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        .footer {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            color: white;
+            padding: 50px 20px 20px;
+            margin-top: 60px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .footer-section h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #f39c12;
+        }
+
+        .footer-section p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #bdc3c7;
+        }
+
+        .social-paws {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .footer-links a {
+            color: #3498db;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: #f39c12;
+            text-decoration: underline;
+        }
+
+        .paw-button {
+            font-size: 2rem;
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline-block;
+            text-decoration: none;
+            color: white;
+        }
+
+        .paw-button:hover {
+            background: #f39c12;
+            transform: scale(1.2) rotate(360deg);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 2px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .about-link {
+            display: inline-block;
+            background: linear-gradient(45deg, #ff6b6b, #ff8e53);
+            color: white;
+            padding: 15px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: transform 0.3s ease;
+            margin-top: 15px;
+        }
+
+        .about-link:hover {
+            transform: scale(1.1);
+            text-decoration: none;
+            color: white;
+        }
+
+        .footer-bottom p {
+            margin-bottom: 10px;
+            color: #95a5a6;
+        }
+
+        .footer-tagline {
+            font-size: 1.2rem;
+            color: #f39c12;
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                padding: 40px 15px;
+            }
+            
+            .hero h1 {
+                font-size: 3.5rem;
+                line-height: 1.1;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
+                padding: 0 10px;
+            }
+            
+            .refresh-note {
+                padding: 12px 20px;
+                font-size: 0.9rem;
+            }
+            
+            .gallery {
+                grid-template-columns: 1fr;
+                gap: 20px;
+                padding: 0 15px 40px;
+            }
+            
+            .puppy-card {
+                border-radius: 15px;
+            }
+            
+            .puppy-image {
+                height: 250px;
+            }
+            
+            .puppy-content {
+                padding: 20px;
+            }
+            
+            .puppy-title {
+                font-size: 1.5rem;
+            }
+            
+            .puppy-subtitle {
+                font-size: 1rem;
+            }
+            
+            .footer {
+                padding: 40px 15px 20px;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 30px;
+                text-align: center;
+            }
+            
+            .footer-section h3 {
+                font-size: 1.3rem;
+            }
+            
+            .footer-section p {
+                font-size: 1rem;
+            }
+            
+            .social-paws {
+                gap: 10px;
+            }
+            
+            .paw-button {
+                font-size: 1.5rem;
+                padding: 8px;
+            }
+            
+            .footer-bottom {
+                margin-top: 30px;
+                padding-top: 20px;
+            }
+            
+            .footer-tagline {
+                font-size: 1.1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+            
+            .refresh-note {
+                padding: 10px 15px;
+                font-size: 0.85rem;
+            }
+            
+            .puppy-image {
+                height: 200px;
+            }
+            
+            .puppy-content {
+                padding: 15px;
+            }
+            
+            .puppy-title {
+                font-size: 1.3rem;
+            }
+            
+            .footer-links a {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="floating-hearts" id="hearts"></div>
+    
+    <div class="hero">
+        <h1>🐕 Got Puppy? 🐕</h1>
+        <p>Welcome to the most adorable corner of the internet! Get ready for cuteness overload!</p>
+        <div class="refresh-note">
+            🌟 Come back tomorrow for brand new puppy friends! 🌟
+        </div>
+    </div>
+
+    <div class="gallery" id="gallery">
+        <!-- Puppy cards will be generated here -->
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>🐾 Paw-some Links</h3>
+                <div class="footer-links">
+                    <a href="https://www.aspca.org/adopt-pet" target="_blank">Adopt</a> • 
+                    <a href="https://bestfriends.org/" target="_blank">Foster</a> • 
+                    <a href="https://www.animalleague.org" target="_blank">Volunteer</a> • 
+                    <a href="https://www.spcai.org/" target="_blank">Donate</a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>💝 Spread the Love</h3>
+                <p>Share the cuteness with friends!</p>
+                <div class="social-paws">
+                    <a href="https://www.facebook.com" target="_blank" class="paw-button">🐕</a>
+                    <a href="https://www.instagram.com" target="_blank" class="paw-button">🐶</a>
+                    <a href="https://www.tiktok.com" target="_blank" class="paw-button">🦴</a>
+                    <a href="https://www.twitter.com" target="_blank" class="paw-button">🎾</a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>🏠 Puppy HQ</h3>
+                <p>Where every day is <em>paws-itively</em> amazing!</p>
+                <a href="/about" class="about-link">📖 Our Pawsome Story</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 Got Puppy? • Made with 💖 and lots of belly rubs</p>
+            <p class="footer-tagline">
+                <em>"Life is <strong>ruff</strong> without puppies!"</em> 🐾
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Puppy data with placeholder images and adorable titles
+        const puppyData = [
+            {
+                image: "https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=400&h=300&fit=crop",
+                title: "Sir Wiggles McFluff",
+                subtitle: "Professional treat inspector and belly rub enthusiast 🐾"
+            },
+            {
+                image: "https://images.unsplash.com/photo-1552053831-71594a27632d?w=400&h=300&fit=crop",
+                title: "Princess Booplesnoot",
+                subtitle: "Expert at melting hearts with a single glance ✨"
+            },
+            {
+                image: "https://images.unsplash.com/photo-1518717758536-85ae29035b6d?w=400&h=300&fit=crop",
+                title: "Captain Zoomies",
+                subtitle: "Fastest tail-chaser in the seven neighborhoods 🚀"
+            },
+            {
+                image: "https://images.unsplash.com/photo-1561037404-61cd46aa615b?w=400&h=300&fit=crop",
+                title: "Lady Snugglebottom",
+                subtitle: "Certified cuddle specialist and sock thief extraordinaire 🧦"
+            },
+            {
+                image: "https://images.unsplash.com/photo-1583337130417-3346a1be7dee?w=400&h=300&fit=crop",
+                title: "Duke Pawsalot",
+                subtitle: "Noble guardian of the food bowl and destroyer of squeaky toys 👑"
+            },
+            {
+                image: "https://images.unsplash.com/photo-1546527868-ccb7ee7dfa6a?w=400&h=300&fit=crop",
+                title: "Miss Buttercup Wigglebutt",
+                subtitle: "Professional flower sniffer and butterfly chaser 🌸"
+            },
+            {
+                image: "https://images.unsplash.com/photo-1576201836106-db1758fd1c97?w=400&h=300&fit=crop",
+                title: "Sir Biscuit the Brave",
+                subtitle: "Fearless protector against vacuum cleaners and doorbell demons 🛡️"
+            },
+            {
+                image: "https://images.unsplash.com/photo-1558788353-f76d92427f16?w=400&h=300&fit=crop",
+                title: "Duchess Floppyears",
+                subtitle: "Master of the puppy dog eyes and treat negotiation tactics 🥺"
+            },
+            {
+                image: "https://images.unsplash.com/photo-1559190394-90-39-90-90?w=400&h=300&fit=crop",
+                title: "Baron von Barksworth",
+                subtitle: "Distinguished gentleman with a PhD in Good Boy Studies 🎓"
+            },
+            {
+                image: "https://images.unsplash.com/photo-1554456854-55a089fd4cb2?w=400&h=300&fit=crop",
+                title: "Princess Peanut Butter",
+                subtitle: "Tiny but mighty, with a heart as big as her appetite 💝"
+            },
+            {
+                image: "https://images.unsplash.com/photo-1537151608828-ea2b11777ee8?w=400&h=300&fit=crop",
+                title: "Count Snootboop",
+                subtitle: "Aristocratic nose-poker and professional lap warmer 🎯"
+            },
+            {
+                image: "https://images.unsplash.com/photo-1601758228041-f3b2795255f1?w=400&h=300&fit=crop",
+                title: "Lady Marshmallow",
+                subtitle: "Fluffy cloud in dog form, powered by pure sweetness ☁️"
+            },
+            {
+                image: "https://images.unsplash.com/photo-1560743173-567a3b5658b1?w=400&h=300&fit=crop",
+                title: "Admiral Tailwag",
+                subtitle: "Commander of the backyard fleet and master of fetch tactics ⚓"
+            },
+            {
+                image: "https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?w=400&h=300&fit=crop",
+                title: "Dame Wigglesnout",
+                subtitle: "Professional grass-roller and puddle-splasher extraordinaire 💦"
+            },
+            {
+                image: "https://images.unsplash.com/photo-1552053831-71594a27632d?w=400&h=300&fit=crop",
+                title: "Lord Biscuitface",
+                subtitle: "Noble keeper of the couch cushions and treat jar guardian 🍪"
+            },
+            {
+                image: "https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=400&h=300&fit=crop",
+                title: "Miss Sunshine Pawprints",
+                subtitle: "Spreading joy one tail wag at a time, batteries not included 🌞"
+            },
+            {
+                image: "https://images.unsplash.com/photo-1518717758536-85ae29035b6d?w=400&h=300&fit=crop",
+                title: "Emperor Fuzzbutt",
+                subtitle: "Ruler of all hearts and sovereign of the dog park kingdom 👑"
+            },
+            {
+                image: "https://images.unsplash.com/photo-1561037404-61cd46aa615b?w=400&h=300&fit=crop",
+                title: "Countess Snugglepaws",
+                subtitle: "Expert in advanced snuggling techniques and sock liberation 🧦"
+            },
+            {
+                image: "https://images.unsplash.com/photo-1583337130417-3346a1be7dee?w=400&h=300&fit=crop",
+                title: "Sir Pancake McFlufferson",
+                subtitle: "Round, fluffy, and 100% made of pure adorableness 🥞"
+            },
+            {
+                image: "https://images.unsplash.com/photo-1546527868-ccb7ee7dfa6a?w=400&h=300&fit=crop",
+                title: "Princess Butterscotch",
+                subtitle: "Sweet as candy and twice as energetic, handle with cuddles 🍯"
+            }
+        ];
+
+        // Function to shuffle array
+        function shuffleArray(array) {
+            const shuffled = [...array];
+            for (let i = shuffled.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+            }
+            return shuffled;
+        }
+
+        // Function to create puppy card
+        function createPuppyCard(puppy, index) {
+            return `
+                <div class="puppy-card" style="animation-delay: ${index * 0.1}s;">
+                    <img src="${puppy.image}" alt="${puppy.title}" class="puppy-image">
+                    <div class="puppy-content">
+                        <h3 class="puppy-title">${puppy.title} <span class="paw-icon">🐾</span></h3>
+                        <p class="puppy-subtitle">${puppy.subtitle}</p>
+                    </div>
+                </div>
+            `;
+        }
+
+        // Function to create floating hearts
+        function createFloatingHearts() {
+            const heartsContainer = document.getElementById('hearts');
+            const hearts = ['💖', '💕', '💗', '💝', '🐾', '🦴', '🎾'];
+            
+            for (let i = 0; i < 15; i++) {
+                const heart = document.createElement('div');
+                heart.className = 'heart';
+                heart.textContent = hearts[Math.floor(Math.random() * hearts.length)];
+                heart.style.left = Math.random() * 100 + '%';
+                heart.style.animationDelay = Math.random() * 6 + 's';
+                heart.style.animationDuration = (Math.random() * 3 + 4) + 's';
+                heartsContainer.appendChild(heart);
+            }
+        }
+
+        // Initialize the gallery
+        function initGallery() {
+            const gallery = document.getElementById('gallery');
+            const shuffledPuppies = shuffleArray(puppyData);
+            const displayPuppies = shuffledPuppies.slice(0, 12); // Show 12 random puppies
+            
+            gallery.innerHTML = displayPuppies.map((puppy, index) => 
+                createPuppyCard(puppy, index)
+            ).join('');
+        }
+
+        // Initialize everything when page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            initGallery();
+            createFloatingHearts();
+        });
+    </script>
+</body>
+</html>
